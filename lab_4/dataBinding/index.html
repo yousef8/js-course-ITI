@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Binding</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    .container {
+      margin: auto;
+      width: fit-content;
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .header {
+      font-size: xx-large;
+      padding: 1em 2em;
+    }
+
+    .card {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      width: 27rem;
+      height: 48rem;
+      box-shadow: 10px 10px 10px #ccc;
+      border-radius: 25px;
+      gap: 3rem;
+      overflow: hidden;
+    }
+
+    .card img {
+      width: 100%;
+      height: 65%;
+      object-fit: cover;
+    }
+
+    .card .info {
+      font-size: x-large;
+      padding: 0.5rem 1rem;
+    }
+
+    .characters {
+      font-size: x-large;
+      display: flex;
+      flex-flow: row wrap;
+      gap: 1rem;
+    }
+
+    .characters button {
+      background-color: #007BFF;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 12px;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="header">Click to show Data</div>
+
+    <div class="card">
+      <img id="avatar" src="./imgs/default-profile-pic.png" alt="">
+      <div class="info">
+        <div>Name: <span id="name">Click to Change</span></div>
+        <div>Position: <span id="position">Click to Change</span></div>
+      </div>
+    </div>
+
+    <div class="characters">
+      <button class="elon" onclick="showElon()">Elon Mask</button>
+      <button class="linus" onclick="showLinus()">Linus Torvalds</button>
+    </div>
+  </div>
+  <script src="./main.js"></script>
+</body>
+
+</html>
