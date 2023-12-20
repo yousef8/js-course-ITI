@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fawrey Card Game</title>
+
+  <style>
+    * {
+      padding: 0px;
+      margin: 0px;
+      box-sizing: border-box;
+    }
+
+    .container {
+      display: flex;
+      flex-flow: column wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 3rem;
+      padding: 2rem;
+    }
+
+    .container input {
+      font-size: 2rem;
+      width: 50%;
+      height: 2.5rem;
+      padding: 10px;
+    }
+
+    .container button {
+      font-size: 1.5rem;
+      padding: 1rem;
+      background-color: #dc3545;
+      border: none;
+      color: white;
+      cursor: pointer;
+    }
+
+    .container button:hover {
+      background-color: #DC3545;
+    }
+
+    .container button:active {
+      padding: 0.8rem;
+    }
+
+    .container img {
+      width: 33rem;
+      object-fit: cover;
+    }
+
+    .hide {
+      filter: blur(1.5rem);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>Write your password to show the code</h1>
+    <input type="password" name="passwd" id="passwd">
+    <button onclick="checkPasswd()">Check Password</button>
+    <img id="secret" src="./imgs/fawry_secret.jpg" alt="fawry receipt" class="hide">
+  </div>
+
+  <script src="./main.js">
+  </script>
+</body>
+
+</html>
